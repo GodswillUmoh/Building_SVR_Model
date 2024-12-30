@@ -111,7 +111,10 @@ regressor.fit(X, y)
 
 ## Predicting a new result
 ```python
-prrint(y)
+# It will take the scale values which was already done for sc_y
+# Because, you want to reverse the scaling of output y, you call sc_y
+# to avoid format error, you add .reshape(-1, 1)
+sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])).reshape(-1,1))
 ```
 
 ## Visualising the SVR results
