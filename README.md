@@ -40,6 +40,12 @@ prrint(x)
 ```
 
 ## Print (y)
+### Reshaping the y 
+> Reasons for reshaping include the following:
+> + When you print y after split, you will see it is a 1 D array.
+> + The Standardization class of feature scaling requires a 2D array, hence the conversion
+> + y= y.reshape(number_of_rows, number_of_column), since we do not want to count rows in y, we use len(y) to do the counting automatically
+> + Therefore, we have: y = y.reshape(len(y), 1)
 ```python
 prrint(y)
 
