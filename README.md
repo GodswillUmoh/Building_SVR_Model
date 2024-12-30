@@ -48,6 +48,7 @@ y = y.reshape(len(y),1)
 ```
 
 ## Feature Scaling
+_In case a column has a value of 0 and 1, no need to apply feature scaling in that column because it is already in the range of 0 and 1 that feature scaling is trying to achieve._
 ```python
 prrint(x)
 ```
