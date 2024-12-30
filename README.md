@@ -61,6 +61,11 @@ _In case a column has a value of 0 and 1, no need to apply feature scaling in th
 _Remember you changed the scales or values of the columns to range of 0 and 1, to return the values to the original forms is inverse transformation of feature scaling_
 > The inverse transformation of feature scaling refers to the process of converting scaled data back to its original range or scale. This is particularly useful when you need to interpret results or predictions made on scaled data in their original context.
 
+## When Is Inverse Transformation Used?
+> + After training a machine learning model to interpret predictions in the original scale.
+> + To revert preprocessed data for reporting or visualization.
+> + When reconstructing original data from scaled inputs for real-world application.
+
 ```python
 prrint(x)
 ```
