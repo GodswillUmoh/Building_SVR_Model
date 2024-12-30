@@ -119,5 +119,12 @@ sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])).reshape(-1,1))
 
 ## Visualising the SVR results
 ```python
-prrint(y)
+# displaying the real values
+plt.scatter(sc_X.inverse_transform(X), sc_y.inverse_transform(y), color = 'red')
+# plot the linear line
+plt.plot(sc_X.inverse_transform(X), sc_y.inverse_transform(regressor.predict(X).reshape(-1,1)), color = 'blue')
+plt.title('SVR plot')
+plt.xlabel('Position Level')
+plt.ylabel('Salary')
+plt.show()
 ```
