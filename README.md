@@ -26,17 +26,21 @@ _Data Source: SuperDataScience Dataset_
 
 ## Importing the libraries
 ```python
-prrint(x)
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 ```
 
 ## Importing the dataset
 ```python
-prrint(x)
+dataset = pd.read_csv('Position_Salaries.csv')
+X = dataset.iloc[:, 1:-1].values
+y = dataset.iloc[:, -1].values
 ```
 
 ## Print (X)
 ```python
-prrint(x)
+print(X)
 ```
 
 ## Print (y)
@@ -51,6 +55,11 @@ prrint(y)
 
 # Reshape y to appear vertically as default comes horizontally
 y = y.reshape(len(y),1)
+```
+
+```python
+y = y.reshape(len(y), 1)
+print(y)
 ```
 
 ## Feature Scaling
@@ -73,7 +82,14 @@ _Remember you changed the scales or values of the columns to range of 0 and 1, t
 > + When reconstructing original data from scaled inputs for real-world application.
 
 ```python
-prrint(x)
+from sklearn.preprocessing import StandardScaler
+# we create two instance as the columns do not have similar dataset
+# mean instance computation perfect for Salary (y)
+# but not same for level (X)
+sc_X = StandardScaler()
+sc_y = StandardScaler()
+X = sc_X.fit_transform(X) 
+y = sc_y.fit_transform(y)
 ```
 
 ## Print (X)
@@ -83,7 +99,8 @@ prrint(x)
 
 ## Print (y)
 ```python
-prrint(y)
+# See the values are within the range of -3 to +3 which is the range for Standardization
+print(y)
 ```
 
 ## Training the SVR model on the whole dataset
@@ -94,7 +111,9 @@ prrint(y)
 + [Click to view formula for The Gaussian RBF Kernel](https://ibb.co/znFHbXR)
 + [View the plot of that Kernel Here, click to view](https://ibb.co/2SZ85r7)
 ```python
-prrint(y)
+from sklearn.svm import SVR
+regressor = SVR(kernel='rbf')
+regressor.fit(X, y)
 ```
 
 ## Predicting a new result
