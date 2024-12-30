@@ -49,6 +49,15 @@ y = y.reshape(len(y),1)
 
 ## Feature Scaling
 _In case a column has a value of 0 and 1, no need to apply feature scaling in that column because it is already in the range of 0 and 1 that feature scaling is trying to achieve. If we do not apply, the value of level which is lower compared to salaries will be neglected by the SVR model_
+> Hence, feature scaling is not applied to:
+> + Columns with 0 and 1
+> + dummy variables as they are already 0 and 1
+
+> Apply feature scaling:
+> + Apply feature scaling after split of training and test set, so the test set act as a new dataset for testing
+> + Apply feature scaling when the columns have high magnitudes or values over each other as seen in level and salaries above.
+
+
 ```python
 prrint(x)
 ```
