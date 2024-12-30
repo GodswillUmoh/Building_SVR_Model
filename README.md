@@ -1,5 +1,7 @@
 # Building_SVR_Model
 Refer to Feature scaling and SVR model to understand concepts.
+> Why is it called SVR
+> It is because each point is seen as a vector. Every point outside the tube is a support vector, dictating the formation of the tube
 
 ## Building the Support Vector Regression Model
 
