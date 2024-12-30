@@ -128,3 +128,6 @@ plt.xlabel('Position Level')
 plt.ylabel('Salary')
 plt.show()
 ```
+
+## Python codes results
+[You can view the code results in the terminal here. Click to view](https://colab.research.google.com/drive/1ZSrMS4mI1Q4RDC6sZzvivC7oriJzKBRz#scrollTo=v9NK3KIpTk_H)
