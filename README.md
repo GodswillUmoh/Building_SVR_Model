@@ -90,15 +90,8 @@ sc_X = StandardScaler()
 sc_y = StandardScaler()
 X = sc_X.fit_transform(X) 
 y = sc_y.fit_transform(y)
-```
 
-## Print (X)
-```python
 prrint(x)
-```
-
-## Print (y)
-```python
 # See the values are within the range of -3 to +3 which is the range for Standardization
 print(y)
 ```
