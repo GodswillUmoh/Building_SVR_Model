@@ -90,7 +90,9 @@ prrint(y)
 ## The Gaussian Radial Basis Function (RBF) Kernel
 > The Gaussian Radial Basis Function (RBF) Kernel is one of the most commonly used kernels in Support Vector Machines (SVMs) and other kernel-based machine learning algorithms. It is particularly useful for handling non-linear problems by mapping data points into a higher-dimensional space where they become linearly separable.
 > This helps make non-learn points 'appear linear'...
-[Click to view formula for The Gaussian RBF Kernel](https://ibb.co/znFHbXR)
+> 
++ [Click to view formula for The Gaussian RBF Kernel](https://ibb.co/znFHbXR)
++ [View the plot of that Kernel Here, click to view](https://ibb.co/2SZ85r7)
 ```python
 prrint(y)
 ```
